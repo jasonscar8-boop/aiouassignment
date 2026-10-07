@@ -1,0 +1,6 @@
+{
+  "name": "ALLMA IQBAL UNIVERSITY - Assignment Work Portal",
+  "description": "Daily assignment work opportunities in handwriting and MS Word for students and housewives. Registration plans, direct contact, and official WhatsApp channel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
