@@ -29,7 +29,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
   const [qualification, setQualification] = useState('');
 
   // Payment & Proof Details
-  const [paymentMethod, setPaymentMethod] = useState<'Easypaisa (Abdul Sattar)' | 'JazzCash (Kamran Ali)'>('Easypaisa (Abdul Sattar)');
+  const [paymentMethod, setPaymentMethod] = useState<'Easypaisa (SHABANA NAZ)' | 'JazzCash (SHABANA NAZ)'>('Easypaisa (SHABANA NAZ)');
   const [transactionId, setTransactionId] = useState('');
   const [senderAccount, setSenderAccount] = useState('');
   
@@ -614,8 +614,8 @@ Please verify my registration fee and activate my daily assignment allotting por
                   onChange={(e) => setPaymentMethod(e.target.value as any)}
                   className="w-full px-3.5 py-2.5 rounded-xl bg-[#10233F] border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
                 >
-                  <option value="Easypaisa (Abdul Sattar)">Easypaisa — 03292037816 (Abdul Sattar)</option>
-                  <option value="JazzCash (Kamran Ali)">JazzCash / Easypaisa — 03252921677 (Kamran Ali)</option>
+                  <option value="Easypaisa (SHABANA NAZ)">Easypaisa — 03292037816 (SHABANA NAZ)</option>
+                  <option value="JazzCash (SHABANA NAZ)">JazzCash — 03292037816 (SHABANA NAZ)</option>
                 </select>
               </div>
 
