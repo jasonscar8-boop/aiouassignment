@@ -23,9 +23,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRegister }) => {
     { name: 'Work', href: '#work' },
     { name: 'Registration Plans', href: '#plans' },
     { name: 'How It Works', href: '#how-it-works' },
+    { name: 'Payment Info', href: '#payment-methods' },
     { name: 'About Us', href: '#about' },
-    { name: 'FAQ', href: '#faq' },
     { name: 'Contact', href: '#contact' },
+    { name: 'FAQ', href: '#faq' },
   ];
 
   return (

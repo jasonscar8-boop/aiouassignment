@@ -1,4 +1,4 @@
-import { PlanItem, WorkService, FaqItem, ContactInfo } from '../types';
+import { PlanItem, WorkService, FaqItem, ContactInfo, PaymentAccount } from '../types';
 
 export const OFFICIAL_INFO: ContactInfo = {
   brandName: 'ALLMA IQBAL UNIVERSITY',
@@ -8,6 +8,28 @@ export const OFFICIAL_INFO: ContactInfo = {
   phone2: '03252921677',
   whatsappChannelUrl: 'https://whatsapp.com/channel/0029VbE4PPrKbYMOWNESLm3v',
 };
+
+// Official Payment Accounts for Registration Fee (Easypaisa & JazzCash)
+export const OFFICIAL_PAYMENT_ACCOUNTS: PaymentAccount[] = [
+  {
+    id: 'easypaisa-1',
+    name: 'Easypaisa (Account 1)',
+    accountTitle: 'Abdul Sattar (CEO)',
+    accountNumber: '03292037816',
+    instructions: 'Send exact registration fee via Easypaisa App or shop and keep the screenshot / TRX ID.',
+    iconType: 'easypaisa',
+    badgeColor: 'emerald',
+  },
+  {
+    id: 'jazzcash-1',
+    name: 'JazzCash / Easypaisa (Account 2)',
+    accountTitle: 'Kamran Ali (Owner)',
+    accountNumber: '03252921677',
+    instructions: 'Send exact registration fee via JazzCash / Easypaisa and upload receipt screenshot.',
+    iconType: 'jazzcash',
+    badgeColor: 'amber',
+  },
+];
 
 // Formatting phone numbers for WhatsApp international links (Pakistan +92)
 export const getWhatsAppDirectUrl = (phone: string, text?: string) => {

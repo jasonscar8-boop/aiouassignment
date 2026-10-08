@@ -35,3 +35,34 @@ export interface ContactInfo {
   owner: string;
   brandName: string;
 }
+
+export interface PaymentAccount {
+  id: string;
+  name: string;
+  accountTitle: string;
+  accountNumber: string;
+  instructions?: string;
+  iconType: 'easypaisa' | 'jazzcash' | 'bank' | 'nayapay';
+  badgeColor?: string;
+}
+
+export interface StudentRegistrationOrder {
+  id: string;
+  fullName: string;
+  whatsappNumber: string;
+  studentCity?: string;
+  qualification?: string;
+  candidateType: 'Student' | 'Housewife' | 'Other';
+  workType: 'Handwriting' | 'MS Word' | 'Both';
+  planId: string;
+  planName: string;
+  planFee: number;
+  planDailySalary: number;
+  paymentMethod: string;
+  transactionId?: string;
+  senderAccount?: string;
+  screenshotFileName?: string;
+  screenshotBase64?: string;
+  submissionDate: string;
+  status: 'Pending Verification' | 'Verified' | 'Active';
+}

@@ -10,9 +10,10 @@ export const Footer: React.FC = () => {
     { name: 'Work Opportunities', href: '#work' },
     { name: 'Registration Plans', href: '#plans' },
     { name: 'How It Works', href: '#how-it-works' },
+    { name: 'Payment Info', href: '#payment-methods' },
     { name: 'About Us', href: '#about' },
     { name: 'FAQ', href: '#faq' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Contact Us', href: '#contact' },
   ];
 
   return (

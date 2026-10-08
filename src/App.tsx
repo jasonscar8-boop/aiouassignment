@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
-import { WorkSection } from './components/WorkSection';
-import { EarningsCalculator } from './components/EarningsCalculator';
 import { PlansSection } from './components/PlansSection';
+import { EarningsCalculator } from './components/EarningsCalculator';
+import { WorkSection } from './components/WorkSection';
 import { HowItWorksSection } from './components/HowItWorksSection';
+import { PaymentMethodsSection } from './components/PaymentMethodsSection';
 import { WhatsAppChannelSection } from './components/WhatsAppChannelSection';
 import { AboutSection } from './components/AboutSection';
 import { FaqSection } from './components/FaqSection';
@@ -12,6 +13,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { RegistrationModal } from './components/RegistrationModal';
 import { FloatingActionBar } from './components/FloatingActionBar';
+import { WelcomePopup } from './components/WelcomePopup';
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -50,31 +52,38 @@ export default function App() {
         {/* 5. How It Works Section */}
         <HowItWorksSection onOpenRegister={() => handleOpenRegister('standard')} />
 
-        {/* 6. WhatsApp Channel Section */}
+        {/* 6. Payment Methods & Information Section (Shaheen Feature Integration) */}
+        <PaymentMethodsSection onOpenRegister={(planId) => handleOpenRegister(planId)} />
+
+        {/* 7. WhatsApp Channel Section */}
         <WhatsAppChannelSection />
 
-        {/* 7. About Us Section */}
+        {/* 8. About Us Section */}
         <AboutSection />
 
-        {/* 8. FAQ Accordion Section */}
+        {/* 9. FAQ Accordion Section */}
         <FaqSection />
 
-        {/* 9. Contact Section */}
+        {/* 10. Contact Section */}
         <ContactSection />
       </main>
 
       {/* Footer */}
       <Footer />
 
-      {/* Interactive Registration Modal */}
+      {/* Student Details / Order Form & Payment Verification Modal (Shaheen Feature Integration) */}
       <RegistrationModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
         selectedPlanId={selectedPlanId}
       />
 
+      {/* Welcome Announcement Popup (Shaheen Feature Integration) */}
+      <WelcomePopup onOpenRegister={(planId) => handleOpenRegister(planId)} />
+
       {/* Mobile-first Floating Action Bar & Android Call/WhatsApp quick access */}
       <FloatingActionBar onOpenRegister={() => handleOpenRegister('standard')} />
     </div>
   );
 }
+
