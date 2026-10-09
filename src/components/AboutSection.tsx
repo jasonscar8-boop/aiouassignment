@@ -4,12 +4,12 @@ import { OFFICIAL_INFO } from '../data/portalData';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-16 lg:py-24 relative bg-[#07111F] border-t border-slate-800">
+    <section id="about" className="py-16 lg:py-24 relative bg-[#07111F] border-t border-white/[0.08]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-950/60 border border-amber-500/30 px-3.5 py-1.5 rounded-full mb-3">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-950/60 border border-amber-500/40 px-3.5 py-1.5 rounded-full mb-3 backdrop-blur-md shadow-sm">
             <UserCheck className="w-3.5 h-3.5" />
             Leadership & Purpose
           </div>
@@ -31,7 +31,7 @@ export const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
           
           {/* CEO Card */}
-          <div className="rounded-2xl bg-gradient-to-br from-[#10233F] to-[#07111F] border border-amber-500/30 p-7 shadow-xl relative overflow-hidden group">
+          <div className="rounded-3xl liquid-glass-gold p-7 shadow-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-28 h-28 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
             
             <div className="flex items-center gap-4">
@@ -54,7 +54,7 @@ export const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-300 flex items-center justify-between">
+            <div className="mt-6 pt-4 border-t border-white/10 text-xs text-slate-300 flex items-center justify-between">
               <span>Direct Oversight</span>
               <span className="text-emerald-400 font-semibold flex items-center gap-1">
                 <Shield className="w-3.5 h-3.5" /> Management
@@ -63,7 +63,7 @@ export const AboutSection: React.FC = () => {
           </div>
 
           {/* Owner Card */}
-          <div className="rounded-2xl bg-gradient-to-br from-[#10233F] to-[#07111F] border border-blue-500/30 p-7 shadow-xl relative overflow-hidden group">
+          <div className="rounded-3xl liquid-glass-card liquid-glass-card-hover border border-blue-500/40 p-7 shadow-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-28 h-28 bg-blue-500/10 rounded-full blur-2xl pointer-events-none" />
             
             <div className="flex items-center gap-4">
@@ -86,7 +86,7 @@ export const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-300 flex items-center justify-between">
+            <div className="mt-6 pt-4 border-t border-white/10 text-xs text-slate-300 flex items-center justify-between">
               <span>Administrative Operations</span>
               <span className="text-emerald-400 font-semibold flex items-center gap-1">
                 <Shield className="w-3.5 h-3.5" /> Verified

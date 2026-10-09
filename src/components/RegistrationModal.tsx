@@ -177,9 +177,9 @@ Please verify my registration fee and activate my daily assignment allotting por
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-xl animate-in fade-in duration-200">
       <div 
-        className="relative w-full max-w-2xl bg-[#0B1830] rounded-3xl border-2 border-amber-500/50 shadow-2xl p-5 sm:p-7 md:p-8 max-h-[94vh] overflow-y-auto text-slate-100"
+        className="relative w-full max-w-2xl liquid-glass-panel rounded-3xl border-2 border-amber-500/50 shadow-[0_24px_64px_rgba(0,0,0,0.85)] p-5 sm:p-7 md:p-8 max-h-[94vh] overflow-y-auto text-slate-100"
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-headline"
@@ -187,7 +187,7 @@ Please verify my registration fee and activate my daily assignment allotting por
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-xl hover:bg-slate-800 transition-colors"
+          className="absolute top-4 right-4 p-2 text-slate-300 hover:text-white rounded-xl hover:bg-white/[0.08] transition-colors"
           aria-label="Close dialog"
         >
           <X className="w-5 h-5" />
@@ -195,7 +195,7 @@ Please verify my registration fee and activate my daily assignment allotting por
 
         {/* Modal Header */}
         <div className="text-center mb-5 pr-6">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4AF37] bg-amber-950/80 border border-[#D4AF37]/30 px-3 py-1 rounded-full mb-2">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4AF37] bg-amber-950/80 border border-[#D4AF37]/30 px-3.5 py-1 rounded-full mb-2 backdrop-blur-sm shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
             Official Registration & Order Form
           </div>
@@ -205,18 +205,18 @@ Please verify my registration fee and activate my daily assignment allotting por
           <p className="text-xs sm:text-sm text-slate-300 mt-1">
             Handwriting & MS Word Work Opportunities · ALLMA IQBAL UNIVERSITY
           </p>
-          <div className="mt-2 text-xs text-[#D4AF37] bg-[#10233F] border border-amber-500/30 py-1 px-3 rounded-md inline-block">
+          <div className="mt-2 text-xs text-[#D4AF37] bg-[#10233F]/80 backdrop-blur-sm border border-amber-500/40 py-1 px-3.5 rounded-full inline-block shadow-sm">
             <strong>Registration Fee = One Time</strong> &nbsp;|&nbsp; <strong>Assignment = Daily</strong>
           </div>
         </div>
 
         {/* Navigation Tabs if not submitted */}
         {!submittedOrder && (
-          <div className="flex rounded-xl bg-[#07111F] p-1 mb-5 border border-slate-800">
+          <div className="flex rounded-2xl liquid-glass-input p-1 mb-5 border border-white/10">
             <button
               type="button"
               onClick={() => setActiveTab('form')}
-              className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all ${
+              className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all ${
                 activeTab === 'form'
                   ? 'bg-blue-600 text-white shadow-md'
                   : 'text-slate-400 hover:text-white'
@@ -227,7 +227,7 @@ Please verify my registration fee and activate my daily assignment allotting por
             <button
               type="button"
               onClick={() => setActiveTab('payment-info')}
-              className={`flex-1 py-2 rounded-lg text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
+              className={`flex-1 py-2 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-1.5 ${
                 activeTab === 'payment-info'
                   ? 'bg-amber-600/90 text-white shadow-md'
                   : 'text-slate-400 hover:text-white'
@@ -242,8 +242,8 @@ Please verify my registration fee and activate my daily assignment allotting por
         {/* ================= IF SUBMISSION SUCCESS CONFIRMATION ================= */}
         {submittedOrder ? (
           <div className="space-y-6 animate-in zoom-in-95 duration-200">
-            <div className="p-6 rounded-2xl bg-[#10233F] border-2 border-emerald-500/50 text-center space-y-3">
-              <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-400/40 flex items-center justify-center mx-auto">
+            <div className="p-6 rounded-3xl liquid-glass-card border-2 border-emerald-500/50 text-center space-y-3">
+              <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-400/40 flex items-center justify-center mx-auto shadow-inner">
                 <CheckCircle2 className="w-9 h-9" />
               </div>
               <h4 className="text-xl sm:text-2xl font-black text-white">
@@ -252,14 +252,14 @@ Please verify my registration fee and activate my daily assignment allotting por
               <p className="text-xs sm:text-sm text-slate-300 max-w-md mx-auto">
                 Thank you <strong className="text-white">{submittedOrder.fullName}</strong>. Your registration order is saved with Reference ID: <span className="font-mono text-amber-300 font-bold">{submittedOrder.id}</span>.
               </p>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/80 border border-amber-500/40 text-amber-300 text-xs font-bold">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-950/80 border border-amber-500/40 text-amber-300 text-xs font-bold backdrop-blur-sm">
                 Status: Pending Verification by University Staff
               </div>
             </div>
 
             {/* Order Summary Receipt Box */}
-            <div className="rounded-2xl bg-[#07111F] border border-slate-700/80 p-5 text-xs space-y-3">
-              <div className="flex items-center justify-between pb-2 border-b border-slate-800 text-slate-400 font-bold uppercase tracking-wider text-[11px]">
+            <div className="rounded-3xl liquid-glass-input p-5 text-xs space-y-3 border border-white/10">
+              <div className="flex items-center justify-between pb-2 border-b border-white/10 text-slate-400 font-bold uppercase tracking-wider text-[11px]">
                 <span>Order Summary Receipt</span>
                 <span>{submittedOrder.submissionDate}</span>
               </div>
@@ -362,7 +362,7 @@ Please verify my registration fee and activate my daily assignment allotting por
         ) : activeTab === 'payment-info' ? (
           /* ================= TAB 2: PAYMENT DETAILS DISPLAY ================= */
           <div className="space-y-5 animate-in fade-in duration-200">
-            <div className="p-3.5 rounded-xl bg-[#10233F] border border-amber-500/30 text-xs text-slate-300">
+            <div className="p-3.5 rounded-2xl liquid-glass-subtle border border-amber-500/40 text-xs text-slate-300">
               <div className="font-bold text-white mb-0.5">Where to Send the Registration Fee:</div>
               Send exactly <strong className="text-amber-300">Rs. {currentPlan.fee}</strong> for the <strong>{currentPlan.name} Plan</strong> to either official account below:
             </div>
@@ -371,7 +371,7 @@ Please verify my registration fee and activate my daily assignment allotting por
               {OFFICIAL_PAYMENT_ACCOUNTS.map((account) => {
                 const isCopied = copiedAccount === account.id;
                 return (
-                  <div key={account.id} className="p-4 rounded-2xl bg-[#07111F] border border-slate-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <div key={account.id} className="p-4 rounded-2xl liquid-glass-card border border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div>
                       <div className="text-[11px] font-bold text-amber-400 uppercase">{account.name}</div>
                       <div className="text-white font-black text-base">{account.accountTitle}</div>
@@ -401,12 +401,12 @@ Please verify my registration fee and activate my daily assignment allotting por
               })}
             </div>
 
-            <div className="p-3.5 rounded-xl bg-[#10233F] border border-slate-700/80 text-xs text-slate-300 flex items-center justify-between">
+            <div className="p-3.5 rounded-2xl liquid-glass-subtle border border-white/10 text-xs text-slate-300 flex items-center justify-between">
               <span>Have you made the payment?</span>
               <button
                 type="button"
                 onClick={() => setActiveTab('form')}
-                className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 font-black text-xs shadow-md"
+                className="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 font-black text-xs shadow-md hover:from-amber-300 hover:to-yellow-400"
               >
                 Back to Registration Form & Upload Proof
               </button>
@@ -429,14 +429,14 @@ Please verify my registration fee and activate my daily assignment allotting por
                       key={plan.id}
                       type="button"
                       onClick={() => setPlanId(plan.id)}
-                      className={`p-3 rounded-xl border text-left transition-all relative ${
+                      className={`p-3 rounded-2xl text-left transition-all relative ${
                         isSelected
-                          ? 'bg-blue-600/30 border-2 border-amber-400 text-white shadow-lg ring-1 ring-amber-400/30'
-                          : 'bg-[#10233F] border-slate-700/80 text-slate-300 hover:border-slate-500'
+                          ? 'liquid-glass-gold ring-1 ring-amber-400/40'
+                          : 'liquid-glass-card hover:border-white/20'
                       }`}
                     >
                       {plan.isPopular && (
-                        <span className="absolute -top-2 right-2 bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 text-[9px] font-black px-1.5 py-0.5 rounded shadow-xs">
+                        <span className="absolute -top-2 right-2 bg-gradient-to-r from-amber-400 to-yellow-500 text-slate-950 text-[9px] font-black px-1.5 py-0.5 rounded shadow-sm">
                           POPULAR
                         </span>
                       )}
@@ -461,13 +461,13 @@ Please verify my registration fee and activate my daily assignment allotting por
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
                   2. Assignment Preference
                 </label>
-                <div className="grid grid-cols-3 gap-1 p-1 bg-[#10233F] rounded-xl border border-slate-700">
+                <div className="grid grid-cols-3 gap-1 p-1 bg-white/[0.04] rounded-2xl border border-white/10 backdrop-blur-md">
                   {(['Handwriting', 'MS Word', 'Both'] as const).map((type) => (
                     <button
                       key={type}
                       type="button"
                       onClick={() => setWorkType(type)}
-                      className={`py-2 text-xs font-bold rounded-lg transition-colors ${
+                      className={`py-2 text-xs font-bold rounded-xl transition-all ${
                         workType === type
                           ? 'bg-blue-600 text-white shadow-md'
                           : 'text-slate-400 hover:text-white'
@@ -483,13 +483,13 @@ Please verify my registration fee and activate my daily assignment allotting por
                 <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
                   3. Applicant Category
                 </label>
-                <div className="grid grid-cols-3 gap-1 p-1 bg-[#10233F] rounded-xl border border-slate-700">
+                <div className="grid grid-cols-3 gap-1 p-1 bg-white/[0.04] rounded-2xl border border-white/10 backdrop-blur-md">
                   {(['Student', 'Housewife', 'Other'] as const).map((cat) => (
                     <button
                       key={cat}
                       type="button"
                       onClick={() => setCandidateType(cat)}
-                      className={`py-2 text-xs font-bold rounded-lg transition-colors ${
+                      className={`py-2 text-xs font-bold rounded-xl transition-all ${
                         candidateType === cat
                           ? 'bg-blue-600 text-white shadow-md'
                           : 'text-slate-400 hover:text-white'
@@ -503,7 +503,7 @@ Please verify my registration fee and activate my daily assignment allotting por
             </div>
 
             {/* Step 3: Candidate Information Fields with Validation */}
-            <div className="p-4 rounded-2xl bg-[#07111F] border border-slate-700/80 space-y-3">
+            <div className="p-4 rounded-3xl liquid-glass-panel border border-white/10 space-y-3">
               <div className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center justify-between">
                 <span>4. Student / Candidate Information</span>
                 <span className="text-[10px] text-amber-400">* Required fields</span>
@@ -522,10 +522,10 @@ Please verify my registration fee and activate my daily assignment allotting por
                       if (errors.fullName) setErrors({ ...errors, fullName: '' });
                     }}
                     placeholder="e.g. Ayesha Khan / Muhammad Ali"
-                    className={`w-full px-3.5 py-2.5 rounded-xl bg-[#10233F] border text-sm text-white placeholder-slate-500 focus:outline-none transition-all ${
+                    className={`w-full px-3.5 py-2.5 rounded-xl liquid-glass-input text-sm text-white placeholder-slate-500 focus:outline-none transition-all ${
                       errors.fullName
                         ? 'border-red-500 focus:border-red-400'
-                        : 'border-slate-700 focus:border-blue-500'
+                        : 'border-white/15 focus:border-amber-400/70'
                     }`}
                   />
                   {errors.fullName && (
@@ -547,10 +547,10 @@ Please verify my registration fee and activate my daily assignment allotting por
                       if (errors.whatsappNumber) setErrors({ ...errors, whatsappNumber: '' });
                     }}
                     placeholder="03XXXXXXXXX"
-                    className={`w-full px-3.5 py-2.5 rounded-xl bg-[#10233F] border text-sm text-white placeholder-slate-500 focus:outline-none transition-all ${
+                    className={`w-full px-3.5 py-2.5 rounded-xl liquid-glass-input text-sm text-white placeholder-slate-500 focus:outline-none transition-all ${
                       errors.whatsappNumber
                         ? 'border-red-500 focus:border-red-400'
-                        : 'border-slate-700 focus:border-blue-500'
+                        : 'border-white/15 focus:border-amber-400/70'
                     }`}
                   />
                   {errors.whatsappNumber && (
@@ -569,7 +569,7 @@ Please verify my registration fee and activate my daily assignment allotting por
                     value={studentCity}
                     onChange={(e) => setStudentCity(e.target.value)}
                     placeholder="e.g. Lahore / Rawalpindi / Karachi"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#10233F] border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl liquid-glass-input text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400/70"
                   />
                 </div>
 
@@ -582,14 +582,14 @@ Please verify my registration fee and activate my daily assignment allotting por
                     value={qualification}
                     onChange={(e) => setQualification(e.target.value)}
                     placeholder="e.g. Matric / Inter / BS / Master"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#10233F] border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl liquid-glass-input text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400/70"
                   />
                 </div>
               </div>
             </div>
 
             {/* Step 4: Payment Details & Receipt / Screenshot Upload (Shaheen Feature) */}
-            <div className="p-4 rounded-2xl bg-[#07111F] border border-amber-500/30 space-y-3">
+            <div className="p-4 rounded-3xl liquid-glass-panel border border-amber-500/40 space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
                   <CreditCard className="w-3.5 h-3.5" />
@@ -612,10 +612,10 @@ Please verify my registration fee and activate my daily assignment allotting por
                 <select
                   value={paymentMethod}
                   onChange={(e) => setPaymentMethod(e.target.value as any)}
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#10233F] border border-slate-700 text-sm text-white focus:outline-none focus:border-blue-500"
+                  className="w-full px-3.5 py-2.5 rounded-xl liquid-glass-input text-sm text-white focus:outline-none focus:border-amber-400/70"
                 >
-                  <option value="Easypaisa (SHABANA NAZ)">Easypaisa — 03292037816 (SHABANA NAZ)</option>
-                  <option value="JazzCash (SHABANA NAZ)">JazzCash — 03292037816 (SHABANA NAZ)</option>
+                  <option value="Easypaisa (SHABANA NAZ)" className="bg-[#0B1830] text-white">Easypaisa — 03292037816 (SHABANA NAZ)</option>
+                  <option value="JazzCash (SHABANA NAZ)" className="bg-[#0B1830] text-white">JazzCash — 03292037816 (SHABANA NAZ)</option>
                 </select>
               </div>
 
@@ -630,7 +630,7 @@ Please verify my registration fee and activate my daily assignment allotting por
                     value={transactionId}
                     onChange={(e) => setTransactionId(e.target.value)}
                     placeholder="e.g. 1298471928"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#10233F] border border-slate-700 text-sm text-white placeholder-slate-500 font-mono focus:outline-none focus:border-blue-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl liquid-glass-input text-sm text-white placeholder-slate-500 font-mono focus:outline-none focus:border-amber-400/70"
                   />
                 </div>
 
@@ -643,7 +643,7 @@ Please verify my registration fee and activate my daily assignment allotting por
                     value={senderAccount}
                     onChange={(e) => setSenderAccount(e.target.value)}
                     placeholder="e.g. 0300XXXXXXX or Sender Name"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-[#10233F] border border-slate-700 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-blue-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl liquid-glass-input text-sm text-white placeholder-slate-500 focus:outline-none focus:border-amber-400/70"
                   />
                 </div>
               </div>
@@ -654,7 +654,7 @@ Please verify my registration fee and activate my daily assignment allotting por
                   Upload Payment Screenshot / Receipt Proof
                 </label>
                 
-                <div className="relative border-2 border-dashed border-slate-700 hover:border-amber-400/50 rounded-2xl p-4 text-center transition-all bg-[#10233F]/60">
+                <div className="relative border-2 border-dashed border-white/20 hover:border-amber-400/60 rounded-2xl p-4 text-center transition-all liquid-glass-input">
                   <input
                     type="file"
                     accept="image/*"
@@ -669,7 +669,7 @@ Please verify my registration fee and activate my daily assignment allotting por
                         <img
                           src={screenshotPreview}
                           alt="Receipt Preview"
-                          className="w-14 h-14 object-cover rounded-xl border border-emerald-500/50"
+                          className="w-14 h-14 object-cover rounded-xl border border-emerald-500/50 shadow-md"
                         />
                         <div>
                           <span className="text-xs font-bold text-emerald-400 block flex items-center gap-1">
@@ -706,7 +706,7 @@ Please verify my registration fee and activate my daily assignment allotting por
             </div>
 
             {/* Summary Box */}
-            <div className="p-3.5 rounded-xl bg-[#10233F] border border-amber-500/30 flex items-start gap-3 text-xs">
+            <div className="p-3.5 rounded-2xl liquid-glass-subtle border border-amber-500/40 flex items-start gap-3 text-xs">
               <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
               <div className="text-slate-300 space-y-0.5">
                 <span className="font-bold text-white">Summary for {currentPlan.name} Plan: </span>

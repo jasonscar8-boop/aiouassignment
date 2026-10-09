@@ -10,12 +10,12 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-16 lg:py-24 relative bg-[#0B1830] border-t border-slate-800/80">
+    <section id="faq" className="py-16 lg:py-24 relative bg-[#0B1830]/90 backdrop-blur-xl border-t border-white/[0.08]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4AF37] uppercase tracking-widest bg-amber-950/60 border border-[#D4AF37]/30 px-3.5 py-1.5 rounded-full mb-3">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4AF37] uppercase tracking-widest bg-amber-950/60 border border-[#D4AF37]/30 px-3.5 py-1.5 rounded-full mb-3 backdrop-blur-md shadow-sm">
             <HelpCircle className="w-3.5 h-3.5 text-[#D4AF37]" />
             Frequently Asked Questions
           </div>
@@ -37,10 +37,10 @@ export const FaqSection: React.FC = () => {
             return (
               <div
                 key={item.id}
-                className={`rounded-2xl border transition-all duration-200 overflow-hidden bg-[#10233F] ${
+                className={`rounded-2xl transition-all duration-200 overflow-hidden ${
                   isOpen
-                    ? 'border-[#D4AF37]/60 shadow-lg ring-1 ring-[#D4AF37]/20'
-                    : 'border-slate-700/80 hover:border-slate-600'
+                    ? 'liquid-glass-panel border-[#D4AF37]/60 shadow-[0_12px_32px_rgba(0,0,0,0.5),inset_0_1px_1px_rgba(255,255,255,0.15)] ring-1 ring-[#D4AF37]/25'
+                    : 'liquid-glass-card hover:border-white/20'
                 }`}
               >
                 <button
@@ -50,7 +50,7 @@ export const FaqSection: React.FC = () => {
                   className="w-full py-4 px-6 text-left flex items-center justify-between gap-4 focus:outline-none"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="text-xs font-bold text-[#D4AF37] bg-amber-950/80 px-2.5 py-0.5 rounded border border-[#D4AF37]/30">
+                    <span className="text-xs font-bold text-[#D4AF37] bg-amber-950/80 px-2.5 py-0.5 rounded border border-[#D4AF37]/30 backdrop-blur-sm">
                       {item.category}
                     </span>
                     <h3 className="text-sm sm:text-base font-bold text-white">
@@ -60,7 +60,7 @@ export const FaqSection: React.FC = () => {
 
                   <div
                     className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 bg-blue-600/30 text-amber-300' : 'bg-slate-800 text-slate-400'
+                      isOpen ? 'rotate-180 bg-blue-600/30 text-amber-300' : 'bg-white/[0.08] text-slate-400'
                     }`}
                   >
                     <ChevronDown className="w-4 h-4" />
@@ -68,7 +68,7 @@ export const FaqSection: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-2 text-slate-300 text-sm leading-relaxed border-t border-slate-700/60 animate-in fade-in duration-200">
+                  <div className="px-6 pb-5 pt-2 text-slate-300 text-sm leading-relaxed border-t border-white/10 animate-in fade-in duration-200">
                     <p>{item.answer}</p>
                   </div>
                 )}

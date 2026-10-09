@@ -8,7 +8,7 @@ interface PlansSectionProps {
 
 export const PlansSection: React.FC<PlansSectionProps> = ({ onSelectPlan }) => {
   return (
-    <section id="plans" className="py-16 lg:py-24 relative bg-[#0B1830] border-y border-slate-800/80">
+    <section id="plans" className="py-16 lg:py-24 relative bg-[#0B1830]/90 backdrop-blur-xl border-y border-white/[0.08]">
       {/* Background glow behind standard card */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-72 bg-blue-900/10 blur-3xl pointer-events-none -z-10" />
 
@@ -16,7 +16,7 @@ export const PlansSection: React.FC<PlansSectionProps> = ({ onSelectPlan }) => {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-950/60 border border-amber-500/30 px-3.5 py-1.5 rounded-full mb-3">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-950/60 border border-amber-500/40 px-3.5 py-1.5 rounded-full mb-3 backdrop-blur-md shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
             Transparent Pricing Structure
           </div>
@@ -30,7 +30,7 @@ export const PlansSection: React.FC<PlansSectionProps> = ({ onSelectPlan }) => {
           </p>
 
           {/* Prominent Golden Banner for "Registration Fee = One Time" & "Assignment = Daily" */}
-          <div className="mt-6 inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 px-6 py-3 rounded-2xl bg-gradient-to-r from-amber-500/15 via-blue-600/20 to-amber-500/15 border-2 border-amber-400/50 shadow-xl backdrop-blur-md">
+          <div className="mt-6 inline-flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 px-6 py-3 rounded-2xl bg-gradient-to-r from-amber-500/15 via-blue-600/20 to-amber-500/15 border-2 border-amber-400/50 shadow-xl backdrop-blur-xl">
             <div className="flex items-center gap-2 text-sm sm:text-base font-extrabold text-amber-300">
               <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
               Registration Fee = One Time
@@ -53,8 +53,8 @@ export const PlansSection: React.FC<PlansSectionProps> = ({ onSelectPlan }) => {
                 key={plan.id}
                 className={`relative flex flex-col rounded-2xl transition-all duration-300 overflow-hidden ${
                   isStandard
-                    ? 'bg-gradient-to-b from-[#183058] via-[#10233F] to-[#0B1830] border-2 border-[#D4AF37] shadow-2xl shadow-amber-500/15 lg:-translate-y-2'
-                    : 'bg-gradient-to-b from-[#10233F] to-[#0B1830] border border-slate-700/80 hover:border-slate-500 shadow-xl'
+                    ? 'liquid-glass-gold lg:-translate-y-2'
+                    : 'liquid-glass-card liquid-glass-card-hover'
                 }`}
               >
                 {/* Popular Badge */}
@@ -75,13 +75,13 @@ export const PlansSection: React.FC<PlansSectionProps> = ({ onSelectPlan }) => {
                           {plan.name}
                         </h3>
                       </div>
-                      <span className="text-[11px] font-semibold text-slate-400 bg-slate-800/80 px-2 py-0.5 rounded">
+                      <span className="text-[11px] font-semibold text-slate-300 bg-white/[0.08] border border-white/10 px-2 py-0.5 rounded-md backdrop-blur-sm">
                         Daily Payout
                       </span>
                     </div>
 
                     {/* Pricing Display */}
-                    <div className="mb-5 pb-5 border-b border-slate-700/60 space-y-3">
+                    <div className="mb-5 pb-5 border-b border-white/10 space-y-3">
                       <div>
                         <div className="text-[11px] uppercase tracking-wider font-semibold text-slate-400">
                           Registration Fee
@@ -94,7 +94,7 @@ export const PlansSection: React.FC<PlansSectionProps> = ({ onSelectPlan }) => {
                         </div>
                       </div>
 
-                      <div className="p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30">
+                      <div className="p-2.5 rounded-xl bg-emerald-950/50 border border-emerald-500/40 backdrop-blur-sm shadow-inner">
                         <div className="text-[11px] uppercase tracking-wider font-semibold text-emerald-300">
                           Salary
                         </div>

@@ -4,15 +4,15 @@ import { OFFICIAL_INFO } from '../data/portalData';
 
 export const WhatsAppChannelSection: React.FC = () => {
   return (
-    <section className="py-14 relative bg-[#07111F] border-t border-slate-800/80">
+    <section className="py-14 relative bg-[#07111F] border-t border-white/[0.08]">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Banner Card */}
-        <div className="relative rounded-3xl bg-gradient-to-r from-[#10233F] via-[#0B1830] to-[#10233F] border border-emerald-500/30 p-8 sm:p-12 shadow-2xl overflow-hidden">
+        <div className="relative rounded-3xl liquid-glass-panel border border-emerald-500/40 p-8 sm:p-12 shadow-2xl overflow-hidden backdrop-blur-2xl">
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 text-center lg:text-left">
             
             <div className="space-y-4 max-w-2xl">
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 px-3.5 py-1.5 rounded-full">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 px-3.5 py-1.5 rounded-full backdrop-blur-sm shadow-sm">
                 <Bell className="w-3.5 h-3.5 text-emerald-400 animate-bounce" />
                 <span>OFFICIAL WHATSAPP COMMUNITY</span>
               </div>

@@ -8,19 +8,19 @@ export const HeroIllustration: React.FC = () => {
       <div className="absolute -inset-4 bg-gradient-to-tr from-blue-600/20 via-amber-500/15 to-indigo-600/20 rounded-3xl blur-2xl -z-10 pointer-events-none" />
 
       {/* Main glass card container */}
-      <div className="relative rounded-2xl bg-gradient-to-b from-slate-900/90 via-[#0d1a33]/90 to-[#071122]/95 border border-slate-700/60 p-5 sm:p-7 shadow-2xl backdrop-blur-xl">
+      <div className="relative rounded-3xl liquid-glass-panel p-5 sm:p-7 shadow-[0_20px_50px_rgba(0,0,0,0.6)] backdrop-blur-2xl">
         
         {/* Top bar with system indicators */}
-        <div className="flex items-center justify-between pb-4 mb-4 border-b border-slate-800">
+        <div className="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
           <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-rose-500/80" />
-            <div className="w-3 h-3 rounded-full bg-amber-500/80" />
-            <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
-            <span className="ml-2 text-xs font-medium text-slate-400 tracking-wide">
+            <div className="w-3 h-3 rounded-full bg-rose-500/80 shadow-sm" />
+            <div className="w-3 h-3 rounded-full bg-amber-500/80 shadow-sm" />
+            <div className="w-3 h-3 rounded-full bg-emerald-500/80 shadow-sm" />
+            <span className="ml-2 text-xs font-medium text-slate-300 tracking-wide">
               Assignment Workspace · Live Portal
             </span>
           </div>
-          <span className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2.5 py-1 rounded-full">
+          <span className="flex items-center gap-1.5 text-xs font-semibold text-emerald-400 bg-emerald-950/70 border border-emerald-500/40 px-2.5 py-1 rounded-full backdrop-blur-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
             Daily Tasks Active
           </span>
@@ -30,8 +30,8 @@ export const HeroIllustration: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
           
           {/* Left Column: MS Word Laptop Display */}
-          <div className="md:col-span-7 bg-[#0b162c] rounded-xl border border-blue-500/30 p-3.5 shadow-lg relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 rounded-full blur-xl pointer-events-none" />
+          <div className="md:col-span-7 bg-[#0b162c]/90 rounded-2xl border border-blue-500/40 p-3.5 shadow-lg relative overflow-hidden group backdrop-blur-sm">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/15 rounded-full blur-xl pointer-events-none" />
             
             {/* Word Header */}
             <div className="flex items-center justify-between bg-[#193264] text-white px-3 py-1.5 rounded-lg text-xs font-medium mb-3 shadow-inner">
@@ -127,33 +127,33 @@ export const HeroIllustration: React.FC = () => {
         </div>
 
         {/* Floating Stat Badges */}
-        <div className="mt-4 pt-3 border-t border-slate-800/80 grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-          <div className="bg-slate-800/60 rounded-lg p-2 border border-slate-700/50 flex items-center gap-2">
+        <div className="mt-4 pt-3 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+          <div className="bg-[#10233F]/70 backdrop-blur-md rounded-xl p-2.5 border border-white/10 flex items-center gap-2 shadow-sm">
             <div className="w-7 h-7 rounded-md bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
               <TrendingUp className="w-4 h-4" />
             </div>
             <div className="text-left">
-              <div className="text-[10px] text-slate-400">Daily Salary</div>
+              <div className="text-[10px] text-slate-300">Daily Salary</div>
               <div className="text-xs font-bold text-white">Rs. 2,000 - 6,000</div>
             </div>
           </div>
 
-          <div className="bg-slate-800/60 rounded-lg p-2 border border-slate-700/50 flex items-center gap-2">
+          <div className="bg-[#10233F]/70 backdrop-blur-md rounded-xl p-2.5 border border-white/10 flex items-center gap-2 shadow-sm">
             <div className="w-7 h-7 rounded-md bg-blue-500/20 text-blue-400 flex items-center justify-center shrink-0">
               <CheckCircle2 className="w-4 h-4" />
             </div>
             <div className="text-left">
-              <div className="text-[10px] text-slate-400">Registration Fee</div>
+              <div className="text-[10px] text-slate-300">Registration Fee</div>
               <div className="text-xs font-bold text-emerald-400">One Time Only</div>
             </div>
           </div>
 
-          <div className="col-span-2 sm:col-span-1 bg-slate-800/60 rounded-lg p-2 border border-slate-700/50 flex items-center gap-2">
+          <div className="col-span-2 sm:col-span-1 bg-[#10233F]/70 backdrop-blur-md rounded-xl p-2.5 border border-white/10 flex items-center gap-2 shadow-sm">
             <div className="w-7 h-7 rounded-md bg-amber-500/20 text-amber-300 flex items-center justify-center shrink-0">
               <Award className="w-4 h-4" />
             </div>
             <div className="text-left">
-              <div className="text-[10px] text-slate-400">Target Audience</div>
+              <div className="text-[10px] text-slate-300">Target Audience</div>
               <div className="text-xs font-bold text-amber-300">Students & Housewives</div>
             </div>
           </div>

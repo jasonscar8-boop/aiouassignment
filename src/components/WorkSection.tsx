@@ -56,20 +56,20 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenRegister }) => {
             return (
               <div
                 key={service.id}
-                className={`group rounded-2xl p-7 transition-all duration-300 flex flex-col justify-between border ${
+                className={`group rounded-3xl p-7 transition-all duration-300 flex flex-col justify-between ${
                   isStudentOrHousewife
-                    ? 'bg-gradient-to-b from-[#183058] via-[#10233F] to-[#0B1830] border-amber-500/40 shadow-xl shadow-amber-500/5 hover:border-amber-400'
-                    : 'bg-gradient-to-b from-[#10233F] to-[#0B1830] border-slate-800 hover:border-slate-700 shadow-lg'
+                    ? 'liquid-glass-gold hover:border-amber-400'
+                    : 'liquid-glass-card liquid-glass-card-hover'
                 } ${isLastOnLarge ? 'md:col-span-2 lg:col-span-1' : ''}`}
               >
                 <div>
                   {/* Top Bar with Icon and Badge */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform">
+                    <div className="w-12 h-12 rounded-2xl bg-white/[0.06] border border-white/15 backdrop-blur-md flex items-center justify-center shadow-inner group-hover:scale-105 transition-transform">
                       {getIcon(service.iconName)}
                     </div>
 
-                    <span className="text-[11px] font-semibold text-amber-300 bg-amber-950/70 border border-amber-500/30 px-2.5 py-1 rounded-full">
+                    <span className="text-[11px] font-semibold text-amber-300 bg-amber-950/70 border border-amber-500/40 px-2.5 py-1 rounded-full backdrop-blur-sm">
                       {service.badge}
                     </span>
                   </div>
@@ -90,7 +90,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenRegister }) => {
                   </p>
 
                   {/* Deliverables Checklist */}
-                  <div className="space-y-2 pt-2 border-t border-slate-800/80 mb-6">
+                  <div className="space-y-2 pt-2 border-t border-white/10 mb-6">
                     <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">
                       Key Highlights:
                     </div>
@@ -106,7 +106,7 @@ export const WorkSection: React.FC<WorkSectionProps> = ({ onOpenRegister }) => {
                 {/* Card CTA */}
                 <button
                   onClick={onOpenRegister}
-                  className="w-full mt-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-slate-800/60 hover:bg-slate-800 border border-slate-700/60 hover:border-amber-400/50 transition-all flex items-center justify-center gap-1.5"
+                  className="w-full mt-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-200 hover:text-white bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 hover:border-amber-400/50 backdrop-blur-md shadow-sm transition-all flex items-center justify-center gap-1.5"
                 >
                   <span>Apply for this work</span>
                   <ArrowRight className="w-3.5 h-3.5" />

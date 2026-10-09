@@ -23,12 +23,12 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ onOpenRegi
   };
 
   return (
-    <section id="how-it-works" className="py-16 lg:py-24 relative bg-[#0B1830] border-t border-slate-800">
+    <section id="how-it-works" className="py-16 lg:py-24 relative bg-[#0B1830]/90 backdrop-blur-xl border-t border-white/[0.08]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-950/60 border border-amber-500/30 px-3.5 py-1.5 rounded-full mb-3">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 uppercase tracking-widest bg-amber-950/60 border border-amber-500/40 px-3.5 py-1.5 rounded-full mb-3 backdrop-blur-md shadow-sm">
             <CheckCircle2 className="w-3.5 h-3.5" />
             Simple 4-Step Process
           </div>
@@ -48,11 +48,11 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ onOpenRegi
             return (
               <div
                 key={step.stepNumber}
-                className="relative rounded-2xl bg-gradient-to-b from-[#10233F] to-[#07111F] border border-slate-700/80 p-6 flex flex-col justify-between hover:border-amber-500/40 transition-all duration-300 shadow-xl group"
+                className="relative rounded-3xl liquid-glass-card liquid-glass-card-hover p-6 flex flex-col justify-between group"
               >
                 {/* Connecting arrow indicator for large screens */}
                 {index < 3 && (
-                  <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-slate-900 border border-slate-700 text-slate-400 flex items-center justify-center">
+                  <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-10 w-6 h-6 rounded-full bg-[#10233F] border border-white/20 text-slate-300 flex items-center justify-center backdrop-blur-md shadow-md">
                     <ArrowRight className="w-3 h-3" />
                   </div>
                 )}
@@ -60,10 +60,10 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ onOpenRegi
                 <div>
                   {/* Step Number & Icon */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-brand text-2xl font-black text-amber-400/40 group-hover:text-amber-400 transition-colors">
+                    <span className="font-brand text-2xl font-black text-amber-400/50 group-hover:text-amber-400 transition-colors">
                       {step.stepNumber}
                     </span>
-                    <div className="w-12 h-12 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform">
+                    <div className="w-12 h-12 rounded-2xl bg-white/[0.06] border border-white/15 backdrop-blur-md flex items-center justify-center shadow-inner group-hover:scale-110 transition-transform">
                       {getStepIcon(step.iconName)}
                     </div>
                   </div>
@@ -77,7 +77,7 @@ export const HowItWorksSection: React.FC<HowItWorksSectionProps> = ({ onOpenRegi
                   </p>
                 </div>
 
-                <div className="pt-6 mt-4 border-t border-slate-800/80 text-[11px] font-semibold text-slate-400 flex items-center justify-between">
+                <div className="pt-6 mt-4 border-t border-white/10 text-[11px] font-semibold text-slate-400 flex items-center justify-between">
                   <span>Step {step.stepNumber} of 04</span>
                   <span className="text-emerald-400 font-bold">Simple</span>
                 </div>

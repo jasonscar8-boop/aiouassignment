@@ -33,9 +33,9 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ onOpenRegister }) =>
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-300">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl animate-in fade-in duration-300">
       <div
-        className="relative w-full max-w-lg bg-[#0B1830] rounded-3xl border-2 border-[#D4AF37] shadow-2xl p-6 sm:p-7 text-slate-100 overflow-hidden transform animate-in zoom-in-95 duration-200"
+        className="relative w-full max-w-lg liquid-glass-gold rounded-3xl shadow-[0_24px_64px_rgba(0,0,0,0.8)] p-6 sm:p-7 text-slate-100 overflow-hidden transform animate-in zoom-in-95 duration-200"
         role="dialog"
         aria-modal="true"
         aria-labelledby="welcome-modal-title"
@@ -47,7 +47,7 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ onOpenRegister }) =>
         {/* Close Button */}
         <button
           onClick={handleDismiss}
-          className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-xl hover:bg-slate-800/80 transition-colors"
+          className="absolute top-4 right-4 p-2 text-slate-300 hover:text-white rounded-xl hover:bg-white/[0.08] transition-colors"
           aria-label="Close announcement"
         >
           <X className="w-5 h-5" />
@@ -55,7 +55,7 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ onOpenRegister }) =>
 
         {/* Header */}
         <div className="text-center pt-2 pb-4">
-          <div className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider text-[#D4AF37] bg-amber-950/80 border border-[#D4AF37]/40 px-3.5 py-1 rounded-full mb-2.5">
+          <div className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wider text-[#D4AF37] bg-amber-950/80 border border-[#D4AF37]/40 px-3.5 py-1 rounded-full mb-2.5 backdrop-blur-sm shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-[#D4AF37] animate-spin" />
             Official Admissions & Work Notice
           </div>
@@ -74,8 +74,8 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ onOpenRegister }) =>
         </div>
 
         {/* One-time Fee & Daily Salary Highlight Card */}
-        <div className="my-3 p-4 rounded-2xl bg-gradient-to-r from-[#10233F] via-[#162e52] to-[#10233F] border border-amber-500/40 shadow-inner">
-          <div className="grid grid-cols-2 gap-3 text-center divide-x divide-slate-700/80">
+        <div className="my-3 p-4 rounded-2xl liquid-glass-subtle border border-amber-500/40 shadow-inner">
+          <div className="grid grid-cols-2 gap-3 text-center divide-x divide-white/10">
             <div>
               <div className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">
                 Registration Fee
@@ -102,7 +102,7 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ onOpenRegister }) =>
         </div>
 
         {/* Key Points */}
-        <div className="space-y-2 my-4 text-xs text-slate-300 bg-[#07111F]/80 p-3.5 rounded-xl border border-slate-800">
+        <div className="space-y-2 my-4 text-xs text-slate-300 liquid-glass-input p-3.5 rounded-2xl">
           <div className="flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
             <span><strong>No Monthly Renewals:</strong> Pay one time, work daily with zero hidden deductions.</span>
@@ -146,7 +146,7 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ onOpenRegister }) =>
             <button
               type="button"
               onClick={handleDismiss}
-              className="py-2.5 px-3 rounded-xl bg-[#10233F] hover:bg-slate-800 text-slate-300 font-semibold border border-slate-700/80"
+              className="py-2.5 px-3 rounded-xl bg-white/[0.06] hover:bg-white/[0.12] text-slate-300 font-semibold border border-white/10 backdrop-blur-md"
             >
               Explore Website First
             </button>
@@ -154,7 +154,7 @@ export const WelcomePopup: React.FC<WelcomePopupProps> = ({ onOpenRegister }) =>
         </div>
 
         {/* Footer note */}
-        <div className="mt-4 pt-3 border-t border-slate-800/80 text-[11px] text-slate-400 text-center flex items-center justify-center gap-2">
+        <div className="mt-4 pt-3 border-t border-white/10 text-[11px] text-slate-400 text-center flex items-center justify-center gap-2">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
           <span>Official Helpline: <strong>{OFFICIAL_INFO.phone1}</strong> / <strong>{OFFICIAL_INFO.phone2}</strong></span>
         </div>

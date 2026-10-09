@@ -35,12 +35,12 @@ export const ContactSection: React.FC = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 lg:py-24 relative bg-[#07111F] border-t border-slate-800/80">
+    <section id="contact" className="py-16 lg:py-24 relative bg-[#07111F] border-t border-white/[0.08]">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4AF37] uppercase tracking-widest bg-amber-950/60 border border-[#D4AF37]/30 px-3.5 py-1.5 rounded-full mb-3">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D4AF37] uppercase tracking-widest bg-amber-950/60 border border-[#D4AF37]/30 px-3.5 py-1.5 rounded-full mb-3 backdrop-blur-md shadow-sm">
             <Headphones className="w-3.5 h-3.5 text-[#D4AF37]" />
             Direct Communication
           </div>
@@ -65,11 +65,11 @@ export const ContactSection: React.FC = () => {
           {contacts.map((contact) => (
             <div
               key={contact.number}
-              className="rounded-3xl bg-[#10233F] border border-slate-700/80 p-7 sm:p-8 shadow-xl flex flex-col justify-between hover:border-blue-500/50 transition-all"
+              className="rounded-3xl liquid-glass-panel p-7 sm:p-8 shadow-2xl flex flex-col justify-between hover:border-blue-500/50 transition-all"
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold uppercase tracking-wider text-blue-300 bg-blue-950/80 border border-blue-500/30 px-3 py-1 rounded-full">
+                  <span className="text-xs font-bold uppercase tracking-wider text-blue-300 bg-blue-950/80 border border-blue-500/30 px-3 py-1 rounded-full backdrop-blur-sm">
                     {contact.label}
                   </span>
                   <span className="text-xs text-slate-400 font-medium">{contact.subtext}</span>
@@ -94,7 +94,7 @@ export const ContactSection: React.FC = () => {
               </div>
 
               {/* Action Buttons for this Number */}
-              <div className="space-y-3 pt-6 border-t border-slate-700/60">
+              <div className="space-y-3 pt-6 border-t border-white/10">
                 {/* Large Call Button */}
                 <a
                   href={`tel:${contact.number}`}
@@ -119,7 +119,7 @@ export const ContactSection: React.FC = () => {
                 <button
                   type="button"
                   onClick={() => handleCopy(contact.number)}
-                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-[#0B1830] hover:bg-[#152a4e] border border-slate-700 transition-colors"
+                  className="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs font-semibold text-slate-200 hover:text-white bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 backdrop-blur-md shadow-sm transition-all"
                 >
                   {copiedNumber === contact.number ? (
                     <>

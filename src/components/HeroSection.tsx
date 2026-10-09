@@ -18,7 +18,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
         
         {/* Top Leadership Announcement Bar */}
         <div className="flex justify-center mb-6">
-          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-4 py-1.5 rounded-full bg-slate-900/90 border border-amber-500/30 text-xs text-slate-300 shadow-md">
+          <div className="inline-flex flex-wrap items-center justify-center gap-2 sm:gap-4 px-4 py-1.5 rounded-full bg-[#10233F]/70 backdrop-blur-xl border border-amber-500/40 text-xs text-slate-300 shadow-[0_8px_24px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.15)]">
             <span className="flex items-center gap-1.5 text-amber-400 font-bold uppercase tracking-wider text-[11px]">
               <Sparkles className="w-3.5 h-3.5" />
               {OFFICIAL_INFO.brandName}
@@ -60,8 +60,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
 
             {/* Crucial Value Propositions */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 max-w-xl mx-auto lg:mx-0">
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-left">
-                <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-2.5 p-3.5 rounded-2xl liquid-glass-subtle text-left">
+                <div className="w-8 h-8 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/30">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
@@ -70,8 +70,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-left">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+              <div className="flex items-center gap-2.5 p-3.5 rounded-2xl liquid-glass-subtle text-left">
+                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/30">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div>
@@ -103,18 +103,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenRegister }) => {
             </div>
 
             {/* Quick Contact Numbers Callout */}
-            <div className="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs text-slate-400">
-              <span className="text-slate-500 font-medium">Direct Inquiries:</span>
+            <div className="pt-3 flex flex-wrap items-center justify-center lg:justify-start gap-x-3 gap-y-2 text-xs text-slate-400">
+              <span className="text-slate-400 font-medium">Direct Inquiries:</span>
               <a
                 href={`tel:${OFFICIAL_INFO.phone1}`}
-                className="flex items-center gap-1.5 font-bold text-slate-200 hover:text-amber-300 transition-colors"
+                className="flex items-center gap-1.5 font-bold text-slate-200 hover:text-amber-300 transition-colors px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-white/20 backdrop-blur-md shadow-sm"
               >
                 <Phone className="w-3.5 h-3.5 text-amber-400" />
                 <span>{OFFICIAL_INFO.phone1}</span>
               </a>
               <a
                 href={`tel:${OFFICIAL_INFO.phone2}`}
-                className="flex items-center gap-1.5 font-bold text-slate-200 hover:text-amber-300 transition-colors"
+                className="flex items-center gap-1.5 font-bold text-slate-200 hover:text-amber-300 transition-colors px-3 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-white/20 backdrop-blur-md shadow-sm"
               >
                 <Phone className="w-3.5 h-3.5 text-amber-400" />
                 <span>{OFFICIAL_INFO.phone2}</span>

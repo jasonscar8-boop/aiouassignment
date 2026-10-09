@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-[#07111F] border-t border-slate-800 text-slate-300 text-sm">
+    <footer className="bg-[#07111F] border-t border-white/[0.08] text-slate-300 text-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
           {/* Col 1: Brand & Purpose */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#10233F] border border-amber-400/30 p-0.5 shadow-md flex items-center justify-center shrink-0">
+              <div className="w-10 h-10 rounded-2xl bg-[#10233F]/80 backdrop-blur-md border border-white/10 p-0.5 shadow-md flex items-center justify-center shrink-0">
                 <BookOpen className="w-5 h-5 text-amber-300" />
               </div>
               <span className="font-brand font-black text-lg text-white uppercase tracking-wider">
@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
             </p>
 
             {/* Leadership Names */}
-            <div className="pt-2 border-t border-slate-800 space-y-1 text-xs">
+            <div className="pt-2 border-t border-white/10 space-y-1 text-xs">
               <div className="text-slate-300">
                 <span className="text-amber-400 font-bold">CEO:</span>{' '}
                 <strong className="text-white font-bold">{OFFICIAL_INFO.ceo}</strong>
@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
             <div className="space-y-2.5">
               <a
                 href={`tel:${OFFICIAL_INFO.phone1}`}
-                className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#10233F] border border-slate-700/80 hover:border-blue-500/60 text-slate-200 hover:text-white transition-colors shadow-md"
+                className="flex items-center gap-2.5 p-3 rounded-2xl liquid-glass-card liquid-glass-card-hover text-slate-200 hover:text-white transition-all shadow-md"
               >
                 <div className="w-7 h-7 rounded-lg bg-blue-900/50 flex items-center justify-center text-blue-400">
                   <Phone className="w-3.5 h-3.5" />
@@ -91,7 +91,7 @@ export const Footer: React.FC = () => {
 
               <a
                 href={`tel:${OFFICIAL_INFO.phone2}`}
-                className="flex items-center gap-2.5 p-2.5 rounded-xl bg-[#10233F] border border-slate-700/80 hover:border-blue-500/60 text-slate-200 hover:text-white transition-colors shadow-md"
+                className="flex items-center gap-2.5 p-3 rounded-2xl liquid-glass-card liquid-glass-card-hover text-slate-200 hover:text-white transition-all shadow-md"
               >
                 <div className="w-7 h-7 rounded-lg bg-blue-900/50 flex items-center justify-center text-blue-400">
                   <Phone className="w-3.5 h-3.5" />

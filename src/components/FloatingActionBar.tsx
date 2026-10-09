@@ -12,13 +12,13 @@ export const FloatingActionBar: React.FC<FloatingActionBarProps> = ({ onOpenRegi
   return (
     <>
       {/* Mobile Sticky Bottom Bar (Visible on screens < md) */}
-      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#07111F]/95 backdrop-blur-lg border-t border-slate-800 px-3 py-2 shadow-2xl">
+      <div className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#07111F]/80 backdrop-blur-xl border-t border-white/10 px-3 py-2 shadow-[0_-8px_24px_rgba(0,0,0,0.5)]">
         <div className="grid grid-cols-3 gap-2">
           {/* Quick Call */}
           <button
             type="button"
             onClick={() => setCallMenuOpen(!callMenuOpen)}
-            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-[#10233F] text-slate-200 active:bg-[#18345c] text-[11px] font-bold border border-slate-700/80"
+            className="flex flex-col items-center justify-center py-1.5 px-2 rounded-xl bg-white/[0.06] backdrop-blur-md text-slate-200 active:bg-white/[0.12] text-[11px] font-bold border border-white/10 shadow-sm"
           >
             <Phone className="w-4 h-4 text-amber-400 mb-0.5" />
             <span>Call Team</span>
@@ -52,12 +52,12 @@ export const FloatingActionBar: React.FC<FloatingActionBarProps> = ({ onOpenRegi
 
       {/* Call Dial Choice Popover on Mobile */}
       {callMenuOpen && (
-        <div className="md:hidden fixed bottom-16 left-3 right-3 z-50 p-4 rounded-2xl bg-[#0B1830] border border-slate-700 shadow-2xl animate-in slide-in-from-bottom-2 duration-200">
-          <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-800">
+        <div className="md:hidden fixed bottom-16 left-3 right-3 z-50 p-4 rounded-3xl liquid-glass-panel border border-amber-500/40 shadow-2xl animate-in slide-in-from-bottom-2 duration-200 backdrop-blur-2xl">
+          <div className="flex items-center justify-between pb-2 mb-3 border-b border-white/10">
             <span className="text-xs font-bold text-slate-200">Choose Contact Number to Call:</span>
             <button
               onClick={() => setCallMenuOpen(false)}
-              className="p-1 text-slate-400 hover:text-white"
+              className="p-1 text-slate-400 hover:text-white rounded-lg hover:bg-white/[0.08]"
             >
               <X className="w-4 h-4" />
             </button>
@@ -67,7 +67,7 @@ export const FloatingActionBar: React.FC<FloatingActionBarProps> = ({ onOpenRegi
             <a
               href={`tel:${OFFICIAL_INFO.phone1}`}
               onClick={() => setCallMenuOpen(false)}
-              className="flex items-center justify-between p-3 rounded-xl bg-[#10233F] text-white border border-slate-700 text-sm font-bold active:bg-[#163056]"
+              className="flex items-center justify-between p-3.5 rounded-2xl liquid-glass-card text-white border border-white/10 text-sm font-bold active:bg-white/[0.1]"
             >
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-amber-400" />
@@ -79,7 +79,7 @@ export const FloatingActionBar: React.FC<FloatingActionBarProps> = ({ onOpenRegi
             <a
               href={`tel:${OFFICIAL_INFO.phone2}`}
               onClick={() => setCallMenuOpen(false)}
-              className="flex items-center justify-between p-3 rounded-xl bg-[#10233F] text-white border border-slate-700 text-sm font-bold active:bg-[#163056]"
+              className="flex items-center justify-between p-3.5 rounded-2xl liquid-glass-card text-white border border-white/10 text-sm font-bold active:bg-white/[0.1]"
             >
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-amber-400" />

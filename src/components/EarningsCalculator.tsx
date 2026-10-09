@@ -17,11 +17,11 @@ export const EarningsCalculator: React.FC<EarningsCalculatorProps> = ({ onSelect
     <section className="py-12 bg-[#07111F] relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="rounded-3xl bg-gradient-to-br from-[#10233F] via-[#0B1830] to-[#07111F] border border-amber-500/30 p-6 sm:p-10 shadow-2xl relative">
+        <div className="rounded-3xl liquid-glass-panel border border-amber-500/40 p-6 sm:p-10 shadow-2xl relative overflow-hidden backdrop-blur-2xl">
           
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-800">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-white/10">
             <div>
-              <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 bg-amber-950/60 border border-amber-500/20 px-3 py-1 rounded-full mb-2">
+              <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 bg-amber-950/60 border border-amber-500/30 px-3 py-1 rounded-full mb-2 backdrop-blur-sm shadow-sm">
                 <Calculator className="w-3.5 h-3.5" />
                 <span>Earnings Estimator</span>
               </div>
@@ -55,8 +55,8 @@ export const EarningsCalculator: React.FC<EarningsCalculatorProps> = ({ onSelect
                       onClick={() => setSelectedPlanId(plan.id)}
                       className={`p-2.5 rounded-xl text-left border transition-all ${
                         selectedPlanId === plan.id
-                          ? 'bg-blue-600/40 border-amber-400 text-white font-bold ring-2 ring-amber-400/20'
-                          : 'bg-slate-900/60 border-slate-700/60 text-slate-300 hover:border-slate-500'
+                          ? 'bg-blue-600/40 border-amber-400 text-white font-bold ring-2 ring-amber-400/20 backdrop-blur-sm'
+                          : 'bg-[#07111F]/60 backdrop-blur-md border-white/10 text-slate-300 hover:border-white/20'
                       }`}
                     >
                       <div className="text-xs font-bold">{plan.emoji} {plan.name}</div>
@@ -70,7 +70,7 @@ export const EarningsCalculator: React.FC<EarningsCalculatorProps> = ({ onSelect
               <div>
                 <div className="flex items-center justify-between text-xs font-semibold text-slate-300 mb-2">
                   <span>Assignment Days Per Month:</span>
-                  <span className="text-amber-400 font-bold bg-slate-800 px-2 py-0.5 rounded">
+                  <span className="text-amber-400 font-bold bg-[#10233F]/80 border border-white/10 px-2 py-0.5 rounded-md backdrop-blur-sm">
                     {daysPerMonth} Days
                   </span>
                 </div>
@@ -91,7 +91,7 @@ export const EarningsCalculator: React.FC<EarningsCalculatorProps> = ({ onSelect
             </div>
 
             {/* Calculations Card */}
-            <div className="lg:col-span-5 bg-gradient-to-b from-[#10233F] to-[#07111F] rounded-2xl border border-blue-500/30 p-5 shadow-xl text-center space-y-4">
+            <div className="lg:col-span-5 rounded-2xl liquid-glass-card border border-blue-500/40 p-6 shadow-xl text-center space-y-4">
               <div>
                 <span className="text-[11px] uppercase tracking-wider font-semibold text-slate-400">
                   Daily Salary

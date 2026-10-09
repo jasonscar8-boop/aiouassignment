@@ -37,7 +37,7 @@ export const PaymentMethodsSection: React.FC<PaymentMethodsSectionProps> = ({ on
           </p>
 
           {/* Golden Reminder Badge */}
-          <div className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-300 bg-[#10233F] border border-amber-500/40 px-4 py-1.5 rounded-full">
+          <div className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-amber-300 bg-[#10233F]/70 backdrop-blur-md border border-amber-500/40 px-4 py-1.5 rounded-full shadow-sm">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
             <span>Reminder: Registration Fee is <strong>One Time Only</strong> — Daily salary has zero deductions.</span>
           </div>
@@ -51,7 +51,7 @@ export const PaymentMethodsSection: React.FC<PaymentMethodsSectionProps> = ({ on
             return (
               <div
                 key={account.id}
-                className="rounded-3xl bg-gradient-to-b from-[#10233F] via-[#0B1830] to-[#07111F] border-2 border-slate-700/80 hover:border-amber-400/50 p-6 sm:p-8 shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden"
+                className="rounded-3xl liquid-glass-panel border-2 border-white/10 hover:border-amber-400/50 p-6 sm:p-8 shadow-2xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden group"
               >
                 {/* Accent glow corner */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl pointer-events-none" />
@@ -59,11 +59,11 @@ export const PaymentMethodsSection: React.FC<PaymentMethodsSectionProps> = ({ on
                 <div>
                   {/* Account Header */}
                   <div className="flex items-center justify-between mb-5">
-                    <span className="text-xs font-extrabold uppercase tracking-wider text-amber-300 bg-amber-950/70 border border-amber-500/30 px-3 py-1 rounded-full flex items-center gap-1.5">
+                    <span className="text-xs font-extrabold uppercase tracking-wider text-amber-300 bg-amber-950/70 border border-amber-500/40 px-3 py-1 rounded-full flex items-center gap-1.5 backdrop-blur-sm">
                       <Smartphone className="w-3.5 h-3.5" />
                       {account.name}
                     </span>
-                    <span className="text-[11px] font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded">
+                    <span className="text-[11px] font-bold text-emerald-400 bg-emerald-950/60 border border-emerald-500/40 px-2.5 py-0.5 rounded-md backdrop-blur-sm">
                       Verified Official
                     </span>
                   </div>
@@ -79,7 +79,7 @@ export const PaymentMethodsSection: React.FC<PaymentMethodsSectionProps> = ({ on
                   </div>
 
                   {/* Account Number Box with Copy Button */}
-                  <div className="p-4 rounded-2xl bg-[#07111F] border border-slate-700/80 mb-5">
+                  <div className="p-4 rounded-2xl liquid-glass-input mb-5">
                     <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
                       Account / Mobile Number:
                     </div>
@@ -119,7 +119,7 @@ export const PaymentMethodsSection: React.FC<PaymentMethodsSectionProps> = ({ on
                 </div>
 
                 {/* Card footer CTA */}
-                <div className="pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+                <div className="pt-4 border-t border-white/10 flex items-center justify-between text-xs">
                   <span className="text-slate-400 flex items-center gap-1">
                     <ShieldCheck className="w-4 h-4 text-emerald-400" />
                     Secure Direct Transfer
@@ -139,7 +139,7 @@ export const PaymentMethodsSection: React.FC<PaymentMethodsSectionProps> = ({ on
         </div>
 
         {/* 3 Step Payment Guide Notice */}
-        <div className="mt-12 max-w-4xl mx-auto rounded-2xl bg-[#0B1830] border border-amber-500/30 p-6 sm:p-7 shadow-xl">
+        <div className="mt-12 max-w-4xl mx-auto rounded-3xl liquid-glass-panel border border-amber-500/40 p-6 sm:p-7 shadow-xl backdrop-blur-2xl">
           <div className="flex items-start gap-3">
             <AlertCircle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
             <div className="space-y-3">
@@ -147,15 +147,15 @@ export const PaymentMethodsSection: React.FC<PaymentMethodsSectionProps> = ({ on
                 Simple 3-Step Payment & Submission Verification Process
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-300 pt-1">
-                <div className="bg-[#10233F] p-3 rounded-xl border border-slate-700/80">
+                <div className="liquid-glass-card p-3.5 rounded-2xl">
                   <div className="font-bold text-amber-300 mb-1">Step 1: Transfer Fee</div>
                   <p>Send the one-time fee (Rs. 150 - 500) via Easypaisa or JazzCash to either official account above.</p>
                 </div>
-                <div className="bg-[#10233F] p-3 rounded-xl border border-slate-700/80">
+                <div className="liquid-glass-card p-3.5 rounded-2xl">
                   <div className="font-bold text-amber-300 mb-1">Step 2: Save Receipt / TRX</div>
                   <p>Take a screenshot of the completed transaction receipt or copy your Transaction ID (TRX ID).</p>
                 </div>
-                <div className="bg-[#10233F] p-3 rounded-xl border border-slate-700/80">
+                <div className="liquid-glass-card p-3.5 rounded-2xl">
                   <div className="font-bold text-amber-300 mb-1">Step 3: Submit Order Form</div>
                   <p>Click Register, upload screenshot or send details on WhatsApp to receive assignments right away.</p>
                 </div>

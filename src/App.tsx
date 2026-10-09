@@ -31,7 +31,15 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#07111F] text-slate-100 flex flex-col font-sans selection:bg-amber-500/30 selection:text-amber-200 pb-16 md:pb-0">
+    <div className="min-h-screen bg-[#07111F] text-slate-100 flex flex-col font-sans selection:bg-amber-500/30 selection:text-amber-200 pb-16 md:pb-0 relative overflow-x-hidden">
+      {/* Liquid Glass Ambient Backlight (Preserves exact #07111F palette) */}
+      <div className="fixed inset-0 pointer-events-none -z-10 overflow-hidden" aria-hidden="true">
+        <div className="absolute -top-32 -left-32 w-[550px] h-[550px] bg-blue-600/10 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] bg-amber-500/8 rounded-full blur-[130px]" />
+        <div className="absolute top-2/3 -left-32 w-[600px] h-[600px] bg-blue-600/8 rounded-full blur-[140px]" />
+        <div className="absolute -bottom-32 right-1/4 w-[500px] h-[500px] bg-amber-500/6 rounded-full blur-[140px]" />
+      </div>
+
       {/* Sticky Header */}
       <Navbar onOpenRegister={() => handleOpenRegister('standard')} />
 
